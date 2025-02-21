@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "totem-feecback": {
+    "totem-web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/totem-feecback",
+            "outputPath": "dist/totem-web",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "totem-feecback:build:production"
+              "buildTarget": "totem-web:build:production"
             },
             "development": {
-              "buildTarget": "totem-feecback:build:development"
+              "buildTarget": "totem-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "9c28c247-bc18-47db-b29a-a6e382a9150e"
   }
 }
