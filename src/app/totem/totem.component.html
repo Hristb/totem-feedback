@@ -1,0 +1,57 @@
+<!-- Contenedor principal -->
+<div class="tab-content">
+  <h1>TOTEM FEEDBACK</h1>
+  <p class="descripcion">Selecciona una de las opciones que mejor te represente.</p>
+
+  <!-- Botones para cambiar de tab 1 -->
+  <div class="tabs">
+    <button 
+      *ngFor="let tab of tabs; let i = index; trackBy: trackByFn" 
+      (click)="seleccionarTab(tab.id)" 
+      [class.active]="tab.activo" 
+      [disabled]="tab.deshabilitado">
+      {{ tab.titulo }}
+      <span class="progress-line" [class.filled]="tab.activo || i < progreso"></span>
+    </button>
+  </div>
+
+
+  <!-- Contenido de cada tab -->
+  <ng-container *ngFor="let tab of tabs; trackBy: trackByFn">
+    <div *ngIf="tab.activo">
+      <h3>📌 {{ tab.titulo }}</h3>
+
+      <!-- Cards dentro de cada tab -->
+      <div class="cards">
+        <div 
+          class="card" 
+          *ngFor="let card of tab.cards; trackBy: trackByFn" 
+          (click)="seleccionarCard(card, tab.id)">
+          <img [src]="card.imagen" alt="{{ card.titulo }}">
+          <div>{{ card.titulo }}</div>
+        </div>
+      </div>
+
+      <!-- Caja de Comentario en el último paso -->
+      <div *ngIf="esUltimoTab(tab.id)" class="comentario-container">
+        <h3>✍️ Agrega un comentario</h3>
+        <div class="input-container">
+          <textarea [(ngModel)]="comentario" 
+                    placeholder="Escribe tu comentario aquí..."
+                    (keyup.enter)="confirmarComentario()"
+                    autocomplete="off"></textarea>
+          <button (click)="confirmarComentario()">Enviar</button>
+        </div>
+      </div>
+      
+    </div>
+  </ng-container>
+
+  <!-- Resumen final después del último tab -->
+  <div class="resumen" *ngIf="mostrarResumen && seleccionados.length">
+    <h2>✅ Resumen de Selección</h2>
+    <p *ngIf="seleccionados[0]"><strong>Card 1:</strong> {{ seleccionados[0].titulo }}</p>
+    <p *ngIf="seleccionados[1]"><strong>Card 2:</strong> {{ seleccionados[1].titulo }}</p>
+    <p><strong>Comentario:</strong> {{ comentario }}</p>
+  </div>
+</div>
