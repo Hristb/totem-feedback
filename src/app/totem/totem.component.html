@@ -22,7 +22,7 @@
       <h3>📌 {{ tab.titulo }}</h3>
 
       <!-- Cards dentro de cada tab -->
-      <div class="cards-container2">
+      <div class="cards-container">
         <app-reversible-card *ngFor="let card of tab.cards; trackBy: trackByFn" 
                              [card]="card"
                              [tabId]="tab.id"

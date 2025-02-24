@@ -70,45 +70,6 @@
   text-align: center;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 10px;
-  justify-content: center;
-  margin-top: 10px;
-
-  @media (max-width: 600px) {
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 2px;
-  }
-}
-
-.card {
-  padding: 15px;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  max-width: 100px; 
-  text-align: center;
-
-  img {
-    width: 80px;
-    height: 80px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
-    background: #007bff;
-    color: white;
-  }
-} 
-
 .resumen {
   max-width: 400px; 
   margin: auto;
@@ -182,20 +143,20 @@
   }
 }
 
-.cards-container2 {
+.cards-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   justify-content: center;
   align-items: center;
   position: relative;
   
-  @media (max-width: 768px) { /* Para mobile */
-    grid-template-columns: repeat(3, 1fr); /* Mantiene 3 columnas */
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (max-width: 480px) { /* Para pantallas pequeñas */
+  @media (max-width: 480px) { 
     gap: 2px;
-    grid-template-columns: repeat(112px, 1fr); /* Sigue en 3 columnas */
+    grid-template-columns: repeat(112px, 1fr);
   }
 }

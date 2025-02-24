@@ -87,19 +87,13 @@ export default class TotemComponent {
     { id: 3, titulo: 'Comentario', activo: false, deshabilitado: true, cards: [] }
   ];
 
-  cards2: Card[] = [
-    { id: 1, titulo: 'Angular', descripcion: 'Framework para SPAs', imagen: 'assets/img/animal-whale.png' },
-    { id: 2, titulo: 'React', descripcion: 'Librería para interfaces UI', imagen: 'assets/img/animal-whale.png' },
-    { id: 3, titulo: 'Vue', descripcion: 'Framework progresivo', imagen: 'assets/vue.png' }
-  ];
-
   seleccionarTab(id: number) {
     this.tabs.forEach(tab => {
       tab.activo = tab.id === id;
       tab.deshabilitado = tab.id < id;
     });
 
-        this.progreso = this.tabs.findIndex(tab => tab.id === id);
+    this.progreso = this.tabs.findIndex(tab => tab.id === id);
   }
 
   seleccionarCard(event: { card: Card; tabId: number }) {
