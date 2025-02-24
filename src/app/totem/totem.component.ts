@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ReversibleCardComponent } from './components/reversible-card/reversible-card.component';
 interface Tab {
   id: number;
   titulo: string;
@@ -21,7 +22,7 @@ interface Card {
 @Component({
   selector: 'app-totem',
   standalone: true,
-  imports: [CommonModule,RouterModule,FormsModule],
+  imports: [CommonModule,RouterModule,FormsModule,ReversibleCardComponent],
   templateUrl: './totem.component.html',
   styleUrl: './totem.component.scss'
 })
@@ -86,6 +87,12 @@ export default class TotemComponent {
     { id: 3, titulo: 'Comentario', activo: false, deshabilitado: true, cards: [] }
   ];
 
+  cards2: Card[] = [
+    { id: 1, titulo: 'Angular', descripcion: 'Framework para SPAs', imagen: 'assets/img/animal-whale.png' },
+    { id: 2, titulo: 'React', descripcion: 'Librería para interfaces UI', imagen: 'assets/img/animal-whale.png' },
+    { id: 3, titulo: 'Vue', descripcion: 'Framework progresivo', imagen: 'assets/vue.png' }
+  ];
+
   seleccionarTab(id: number) {
     this.tabs.forEach(tab => {
       tab.activo = tab.id === id;
@@ -95,7 +102,8 @@ export default class TotemComponent {
         this.progreso = this.tabs.findIndex(tab => tab.id === id);
   }
 
-  seleccionarCard(card: Card, tabId: number) {
+  seleccionarCard(event: { card: Card; tabId: number }) {
+    const { card, tabId } = event;  
     const index = this.seleccionados.findIndex(c => c.id === card.id);
     if (index === -1) {
       this.seleccionados.push(card);

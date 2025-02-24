@@ -1,0 +1,14 @@
+<div class="reversible-card" [class.reversible-card--flipped]="flipped" (click)="toggleFlip()">
+    <div class="reversible-card__inner">
+        <div class="reversible-card__face reversible-card__face--front">
+            <h3 class="reversible-card__title">{{ card.titulo }}</h3>
+            <div class="reversible-card__image-container">
+                <img class="reversible-card__image" [src]="card.imagen" [alt]="card.titulo" />
+            </div>
+        </div>
+        <div class="reversible-card__face reversible-card__face--back">
+            <p class="reversible-card__description">{{ card.descripcion }}</p>
+            <button (click)="sendData()">Siguiente</button>
+        </div>
+    </div>
+</div>

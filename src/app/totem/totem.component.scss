@@ -3,6 +3,13 @@
   max-width: 600px;
   margin: auto;
   text-align: center;
+
+  .title {
+    font-family: "Epilogue", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal
+  }
 }
 
 .tabs {
@@ -100,7 +107,7 @@
     background: #007bff;
     color: white;
   }
-}
+} 
 
 .resumen {
   max-width: 400px; 
@@ -172,5 +179,23 @@
 
   p {
     font-style: italic;
+  }
+}
+
+.cards-container2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+  @media (max-width: 768px) { /* Para mobile */
+    grid-template-columns: repeat(3, 1fr); /* Mantiene 3 columnas */
+  }
+
+  @media (max-width: 480px) { /* Para pantallas pequeñas */
+    gap: 2px;
+    grid-template-columns: repeat(112px, 1fr); /* Sigue en 3 columnas */
   }
 }

@@ -1,0 +1,72 @@
+.reversible-card {
+    height: 170px;
+    perspective: 1000px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+
+    &__inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    &--flipped &__inner {
+        transform: rotateY(180deg);
+    }
+
+    &__face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    &__face--front {
+        background: white;
+        border: 1px solid #ccc;
+    }
+
+    &__face--back {
+        background: #B66140;
+        color: white;
+        transform: rotateY(180deg);
+    }
+
+    &__image-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    &__image {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        border-radius: 5px;
+    }
+
+    &__title {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+    &__description {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+}
