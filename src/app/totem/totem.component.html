@@ -1,6 +1,6 @@
 <!-- Contenedor principal -->
 <div class="tab-content">
-  <h1>TOTEM FEEDBACK</h1>
+  <h1 class="title">TOTEM FEEDBACK</h1>
   <p class="descripcion">Selecciona una de las opciones que mejor te represente.</p>
 
   <!-- Botones para cambiar de tab 1 -->
@@ -22,15 +22,14 @@
       <h3>📌 {{ tab.titulo }}</h3>
 
       <!-- Cards dentro de cada tab -->
-      <div class="cards">
-        <div 
-          class="card" 
-          *ngFor="let card of tab.cards; trackBy: trackByFn" 
-          (click)="seleccionarCard(card, tab.id)">
-          <img [src]="card.imagen" alt="{{ card.titulo }}">
-          <div>{{ card.titulo }}</div>
-        </div>
+      <div class="cards-container2">
+        <app-reversible-card *ngFor="let card of tab.cards; trackBy: trackByFn" 
+                             [card]="card"
+                             [tabId]="tab.id"
+                             (cardEvent)="seleccionarCard($event)">
+        </app-reversible-card>
       </div>
+
 
       <!-- Caja de Comentario en el último paso -->
       <div *ngIf="esUltimoTab(tab.id)" class="comentario-container">
