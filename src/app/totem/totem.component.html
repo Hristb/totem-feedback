@@ -15,12 +15,9 @@
     </button>
   </div>
 
-
   <!-- Contenido de cada tab -->
   <ng-container *ngFor="let tab of tabs; trackBy: trackByFn">
     <div *ngIf="tab.activo">
-      <h3>📌 {{ tab.titulo }}</h3>
-
       <!-- Cards dentro de cada tab -->
       <div class="cards-container">
         <app-reversible-card *ngFor="let card of tab.cards; trackBy: trackByFn" 
@@ -49,8 +46,8 @@
   <!-- Resumen final después del último tab -->
   <div class="resumen" *ngIf="mostrarResumen && seleccionados.length">
     <h2>✅ Resumen de Selección</h2>
-    <p *ngIf="seleccionados[0]"><strong>Card 1:</strong> {{ seleccionados[0].titulo }}</p>
-    <p *ngIf="seleccionados[1]"><strong>Card 2:</strong> {{ seleccionados[1].titulo }}</p>
+    <p *ngIf="seleccionados[0]"><strong>Personalidad:</strong> {{ seleccionados[0].card.titulo }}</p>
+    <p *ngIf="seleccionados[1]"><strong>Culidad:</strong> {{ seleccionados[1].card.titulo }}</p>
     <p><strong>Comentario:</strong> {{ comentario }}</p>
   </div>
 </div>
