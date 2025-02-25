@@ -1,0 +1,70 @@
+[
+    {
+      "id": 1,
+      "titulo": "Personalidad",
+      "activo": true,
+      "deshabilitado": false,
+      "cards": [
+        { "id": 1, "titulo": "Hormiga", "descripcion": "Reconoces y utilizas eficazmente la fortaleza de los demás", "imagen": "assets/img/animals/hormiga.svg" },
+        { "id": 2, "titulo": "Murciélago", "descripcion": "Ves las oportunidades emergentes mejor que nadie", "imagen": "assets/img/animals/murcielago.svg" },
+        { "id": 3, "titulo": "Abeja", "descripcion": "Demuestras una eficiencia extraordinaria", "imagen": "assets/img/animals/abeja.svg" },
+        { "id": 4, "titulo": "Caribú", "descripcion": "No temes explorar nuevos caminos", "imagen": "assets/img/animals/reno.svg" },
+        { "id": 5, "titulo": "Camaleón", "descripcion": "Te adaptas fácilmente a una variedad de situaciones", "imagen": "assets/img/animals/camaleon.svg" },
+        { "id": 6, "titulo": "Caballo", "descripcion": "Permites que otros vayan más rápido y más lejos", "imagen": "assets/img/animals/caballo.svg" },
+        { "id": 7, "titulo": "Colibrí", "descripcion": "Haces todo con precisión y consideración", "imagen": "assets/img/animals/colibri.svg" },
+        { "id": 8, "titulo": "Leopardo", "descripcion": "Actúas rápidamente", "imagen": "assets/img/animals/leopardo.svg" },
+        { "id": 9, "titulo": "León", "descripcion": "Asumes naturalmente un rol de liderazgo", "imagen": "assets/img/animals/leon.svg" },
+        { "id": 10, "titulo": "Ave lira", "descripcion": "Te llevas bien con todos", "imagen": "assets/img/animals/ave.svg" },
+        { "id": 11, "titulo": "Mariposa", "descripcion": "Nunca te rindes antes de llegar a tu destino", "imagen": "assets/img/animals/mariposa.svg" },
+        { "id": 12, "titulo": "Ratón", "descripcion": "Prestas atención a los detalles", "imagen": "assets/img/animals/rata.svg" },
+        { "id": 13, "titulo": "Búho", "descripcion": "Escuchas de manera sincera y genuina", "imagen": "assets/img/animals/buho.svg" },
+        { "id": 14, "titulo": "Mapache", "descripcion": "Clasificas y organizas las cosas con destreza", "imagen": "assets/img/animals/mapache.svg" },
+        { "id": 15, "titulo": "Rinoceronte", "descripcion": "Te mantienes fiel y auténtico en todas las situaciones", "imagen": "assets/img/animals/rinoceronte.svg" },
+        { "id": 16, "titulo": "Gallo", "descripcion": "Siempre se puede contar contigo", "imagen": "assets/img/animals/gallo.svg" },
+        { "id": 17, "titulo": "Ardilla", "descripcion": "Planificas hábilmente para responder a necesidades futuras", "imagen": "assets/img/animals/ardilla.svg" },
+        { "id": 18, "titulo": "Cisne", "descripcion": "Te diferencias respetando a los demás", "imagen": "assets/img/animals/cisne.svg" },
+        { "id": 19, "titulo": "Tigre", "descripcion": "Lideras de manera justa y equitativa", "imagen": "assets/img/animals/tigre.svg" },
+        { "id": 20, "titulo": "Ballena", "descripcion": "Permaneces tranquilo en medio del caos", "imagen": "assets/img/animals/ballena.svg" },
+        { "id": 21, "titulo": "Oveja", "descripcion": "Sabes cómo usar los problemas para mejorar tu vida", "imagen": "assets/img/animals/oveja.svg" }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Cualidad",
+      "activo": false,
+      "deshabilitado": true,
+      "cards": [
+        { "id": 1, "titulo": "Altruista", "descripcion": "Tu altruismo", "imagen": "assets/img/cualidades/altruistic.jpeg" },
+        { "id": 2, "titulo": "Elocuente", "descripcion": "Tu don de la palabra", "imagen": "assets/img/cualidades/articulate.jpeg" },
+        { "id": 3, "titulo": "Valiente", "descripcion": "Tu valentía", "imagen": "assets/img/cualidades/brave.jpeg" },
+        { "id": 4, "titulo": "Comprometido", "descripcion": "Tu compromiso", "imagen": "assets/img/cualidades/committed.jpeg" },
+        { "id": 5, "titulo": "Creativo", "descripcion": "Tu creatividad", "imagen": "assets/img/cualidades/creative.jpeg" },
+        { "id": 6, "titulo": "Empático", "descripcion": "Tu empatía", "imagen": "assets/img/cualidades/empathetic.jpeg" },
+        { "id": 7, "titulo": "Íntegro", "descripcion": "Tu integridad", "imagen": "assets/img/cualidades/ethical.jpeg" },
+        { "id": 8, "titulo": "Enfocado", "descripcion": "Tu enfoque", "imagen": "assets/img/cualidades/focused.jpeg" },
+        { "id": 9, "titulo": "Influyente", "descripcion": "Tu influencia", "imagen": "assets/img/cualidades/influential.jpeg" },
+        { "id": 10, "titulo": "Ingenioso", "descripcion": "Tu ingenio", "imagen": "assets/img/cualidades/ingenious.jpeg" },
+        { "id": 11, "titulo": "Innovador", "descripcion": "Tu capacidad de innovación", "imagen": "assets/img/cualidades/innovative.jpeg" },
+        { "id": 12, "titulo": "Perspicaz", "descripcion": "Tu percepción aguda", "imagen": "assets/img/cualidades/insightfull.jpeg" },
+        { "id": 13, "titulo": "Leal", "descripcion": "Tu lealtad", "imagen": "assets/img/cualidades/loyal.jpeg" },
+        { "id": 14, "titulo": "Motivado", "descripcion": "Tu motivación", "imagen": "assets/img/cualidades/motivated.jpeg" },
+        { "id": 15, "titulo": "De mente abierta", "descripcion": "Tu mentalidad abierta", "imagen": "assets/img/cualidades/open-minded.jpeg" },
+        { "id": 16, "titulo": "Optimista", "descripcion": "Tu optimismo", "imagen": "assets/img/cualidades/optimistic.jpeg" },
+        { "id": 17, "titulo": "Organizado", "descripcion": "Tus habilidades organizativas", "imagen": "assets/img/cualidades/organized.jpeg" },
+        { "id": 18, "titulo": "Paciente", "descripcion": "Tu paciencia", "imagen": "assets/img/cualidades/patient.jpeg" },
+        { "id": 19, "titulo": "Perseverante", "descripcion": "Tu perseverancia", "imagen": "assets/img/cualidades/perseverant.jpeg" },
+        { "id": 20, "titulo": "Productivo", "descripcion": "Tu productividad", "imagen": "assets/img/cualidades/productive.jpeg" },
+        { "id": 21, "titulo": "Respetuoso", "descripcion": "Tu respeto", "imagen": "assets/img/cualidades/respectful.jpeg" },
+        { "id": 22, "titulo": "Colaborador", "descripcion": "Tu espíritu de equipo", "imagen": "assets/img/cualidades/team-oriented.jpeg" },
+        { "id": 23, "titulo": "Versátil", "descripcion": "Tu versatilidad", "imagen": "assets/img/cualidades/versatile.jpeg" },
+        { "id": 24, "titulo": "Sabio", "descripcion": "Tu sabiduría", "imagen": "assets/img/cualidades/wise.jpeg" }
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Comentario",
+      "activo": false,
+      "deshabilitado": true,
+      "cards": []
+    }
+  ]  
