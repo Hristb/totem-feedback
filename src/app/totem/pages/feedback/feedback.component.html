@@ -1,0 +1,52 @@
+<div class="tab-content">
+    <h1 class="title">TOTEM FEEDBACK</h1>
+    <p class="descripcion">Selecciona una de las opciones que mejor te represente.</p>
+  
+    <!-- Botones para cambiar de tab 1 -->
+    <div class="tabs">
+      <button 
+        *ngFor="let tab of tabs; let i = index; trackBy: trackByFn" 
+        (click)="seleccionarTab(tab.id)" 
+        [class.active]="tab.activo" 
+        [disabled]="tab.deshabilitado">
+        {{ tab.titulo }}
+        <span class="progress-line" [class.filled]="tab.activo || i < progreso"></span>
+      </button>
+    </div>
+  
+    <!-- Contenido de cada tab -->
+    <ng-container *ngFor="let tab of tabs; trackBy: trackByFn">
+      <div *ngIf="tab.activo">
+        <!-- Cards dentro de cada tab -->
+        <div class="cards-container">
+          <app-reversible-card *ngFor="let card of tab.cards; trackBy: trackByFn" 
+                               [card]="card"
+                               [tabId]="tab.id"
+                               (cardEvent)="seleccionarCard($event)">
+          </app-reversible-card>
+        </div>
+  
+  
+        <!-- Caja de Comentario en el último paso -->
+        <div *ngIf="esUltimoTab(tab.id)" class="comentario-container">
+          <h3>✍️ Agrega un comentario</h3>
+          <div class="input-container">
+            <textarea [(ngModel)]="comentario" 
+                      placeholder="Escribe tu comentario aquí..."
+                      (keyup.enter)="confirmarComentario()"
+                      autocomplete="off"></textarea>
+            <button (click)="confirmarComentario()">Enviar</button>
+          </div>
+        </div>
+        
+      </div>
+    </ng-container>
+  
+    <!-- Resumen final después del último tab -->
+    <div class="resumen" *ngIf="mostrarResumen && seleccionados.length">
+      <h2>✅ Resumen de Selección</h2>
+      <p *ngIf="seleccionados[0]"><strong>Personalidad:</strong> {{ seleccionados[0].card.titulo }}</p>
+      <p *ngIf="seleccionados[1]"><strong>Culidad:</strong> {{ seleccionados[1].card.titulo }}</p>
+      <p><strong>Comentario:</strong> {{ comentario }}</p>
+    </div>
+  </div>
