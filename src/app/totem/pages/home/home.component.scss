@@ -1,11 +1,17 @@
 .home {
   display: flex;
-  position: relative;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: 0 auto;
   align-items: center;
   flex-direction: column;
   width: 100%;
   max-width: 500px;
+  @media (max-width: 700px) {
+    top: 45%;
+  }
 
   h1, h2 {
     margin: 0;
@@ -13,7 +19,7 @@
   }
 
   h1 {
-    margin-top: 100px;
+    margin-top: 0px;
     font-size: 52px;
     font-weight: 700;
     font-family: "Epilogue", sans-serif;
@@ -23,7 +29,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     @media (max-width: 700px) {
-      margin-top: 50px;   
       font-size: 42px; 
     }
   }
