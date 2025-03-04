@@ -1,5 +1,7 @@
 <!-- Contenedor principal -->
 <div class="totem">
-    <app-header></app-header>
+    <app-background-canvas></app-background-canvas>
+    <app-sidebar-menu [isOpen]="isOpen"></app-sidebar-menu>
+    <app-header (menuToggle)="sidevarEvent($event)"></app-header>
     <router-outlet></router-outlet>
 </div>
