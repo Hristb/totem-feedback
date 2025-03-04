@@ -1,0 +1,65 @@
+.menu-btn {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1100; /* Se asegura que el botón esté siempre encima */
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    padding: 1rem;
+    z-index: 1001;
+    opacity: 0; /* Inicialmente invisible */
+  }
+  
+  .sidebar.open {
+    left: 0;
+    opacity: 1;
+  }
+  
+  /* Agregar backdrop para tapar otros elementos */
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  
+  .backdrop.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Estilos de la lista del menú */
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 1rem 0;
+  }
+  
+  nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  

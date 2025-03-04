@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  @Output() menuToggle = new EventEmitter<string>();
+
   constructor(private router:Router){}
 
   clickHome(){
@@ -17,5 +19,9 @@ export class HeaderComponent {
 
   clickRedirectToRegister(){
     this.router.navigate(['/totem/feedback']);
+  }
+
+  toggleMenu() {
+    this.menuToggle.emit('ok'); 
   }
 }
