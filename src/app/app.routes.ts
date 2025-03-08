@@ -10,6 +10,10 @@ export const routes: Routes = [
                 loadComponent: () => import('./totem/pages/home/home.component'),
             },
             {
+                path: 'register',
+                loadComponent: () => import('./totem/pages/register/register.component'),
+            },
+            {
                 path: 'feedback',
                 loadComponent: () => import('./totem/pages/feedback/feedback.component'),
             },
