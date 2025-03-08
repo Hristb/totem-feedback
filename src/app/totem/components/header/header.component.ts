@@ -18,7 +18,7 @@ export class HeaderComponent {
   }
 
   clickRedirectToRegister(){
-    this.router.navigate(['/totem/feedback']);
+    this.router.navigate(['/totem/register']);
   }
 
   toggleMenu() {
