@@ -36,3 +36,57 @@ html, body {
   body {
     font-family: 'Inter', sans-serif;
   }
+
+
+:root {
+/* 🔴 Reds */
+--color-red-100: oklch(.95 .05 25);    /* Claro */
+--color-red-500: oklch(.75 .15 25);    /* Medio */
+--color-red-900: oklch(.40 .18 25);    /* Oscuro */
+--color-red-neon: oklch(.80 .25 25);   /* Fosforescente */
+
+/* 🌸 Pinks */
+--color-pink-100: oklch(.96 .06 345);  /* Claro */
+--color-pink-500: oklch(.78 .16 345);  /* Medio */
+--color-pink-900: oklch(.45 .20 345);  /* Oscuro */
+--color-pink-neon: oklch(.85 .28 345); /* Fosforescente */
+
+/* 🟠 Oranges */
+--color-orange-100: oklch(.96 .06 55);  
+--color-orange-500: oklch(.80 .18 55);  
+--color-orange-900: oklch(.50 .20 55);  
+--color-orange-neon: oklch(.88 .30 55);  
+
+/* 🟡 Yellows */
+--color-yellow-100: oklch(.97 .07 90);  
+--color-yellow-500: oklch(.85 .18 90);  
+--color-yellow-900: oklch(.55 .22 90);  
+--color-yellow-neon: oklch(.92 .35 90);  
+
+/* 🟢 Greens */
+--color-green-100: oklch(.95 .07 140);  
+--color-green-500: oklch(.78 .20 140);  
+--color-green-900: oklch(.45 .22 140);  
+--color-green-neon: oklch(.85 .32 140);  
+
+/* 🔵 Blues */
+--color-blue-100: oklch(.94 .06 250);  
+--color-blue-500: oklch(.76 .19 250);  
+--color-blue-900: oklch(.42 .21 250);  
+--color-blue-neon: oklch(.85 .30 250);  
+
+/* 🟣 Violets */
+--color-violet-100: oklch(.95 .05 290);  
+--color-violet-500: oklch(.78 .18 290);  
+--color-violet-900: oklch(.43 .20 290);  
+--color-violet-neon: oklch(.86 .28 290);  
+
+/* 🌫️ Grays */
+--color-slate-100: oklch(.968 .007 247.896);
+--color-gray-300: oklch(.872 .01 258.338);
+--color-gray-400: oklch(.707 .022 261.325);
+--color-gray-800: oklch(.278 .033 256.848);
+
+
+}
+
