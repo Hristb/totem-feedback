@@ -1,1 +1,0 @@
-import{Ka as r,La as s,Va as i,Z as o,ab as a}from"./chunk-7SHXZ3LL.js";var t=class n{static \u0275fac=function(e){return new(e||n)};static \u0275cmp=o({type:n,selectors:[["app-register"]],standalone:!0,features:[a],decls:2,vars:0,template:function(e,m){e&1&&(r(0,"p"),i(1,"register works!"),s())}})};export{t as default};
